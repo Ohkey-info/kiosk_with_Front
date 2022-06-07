@@ -136,7 +136,6 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom{
                 .where(itemImg.repimgYn.eq("Y"))
                 .where(itemNmLike(itemSearchDto.getSearchQuery()))
                 .where(itemFoodTypeLike(ItemFoodType.valueOf(param)))
-//                .where(item.itemFoodType.eq(ItemFoodType.valueOf(param)))
                 .orderBy(item.id.desc())
                 .offset(pageable.getOffset())
                 .limit(pageable.getPageSize())

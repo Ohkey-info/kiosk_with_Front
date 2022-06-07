@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<head>
+    <th:block>
+        <link th:href="@{/css/header.css}" rel="stylesheet">
+    </th:block>
+</head>
 
 <div th:fragment="header">
     <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -28,6 +35,9 @@
             </ul>
         </div>
     </nav>
+<!--    <div class="header20">-->
+<!--        하하호호호-->
+<!--    </div>-->
 </div>
 
 </html>

@@ -98,7 +98,7 @@
             data : {"url" : result_url},
 
             success  : function(result, status){
-                location.href='/';
+                history.go(-1)
             },
             error: function(xhr, status, error) {
                 alert("에러가 발생하였습니다.");

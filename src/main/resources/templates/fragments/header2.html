@@ -1,33 +1,182 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <th:block>
+        <link th:href="@{/css/layout1.css}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    </th:block>
+    <!-- favicon -->
+    <!--    <link rel="icon" type="image/png" sizes="192x192" href="/img/동국.png">-->
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bxslider -->
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!-- style.css -->
+    <!--    <link rel="stylesheet" href="../css/layout1.css">-->
+    <!-- js -->
+    <script src="js/global.js"></script>
+    <script src="js/page.js"></script>
+    <!-- jQuery cookie cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+            integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="menu_page">
 
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="/">Kiosk</a>
+    <!--            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">-->
+    <!--                <button class="navbar-toggler" type="button" data-toggle="collapse"-->
+    <!--                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"-->
+    <!--                        aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--                    <span class="navbar-toggler-icon"></span>-->
+    <!--                </button>-->
+    <!--                <a class="navbar-brand" href="/">Kiosk</a>-->
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/CUTLET">돈까스</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/KIMBAB">김밥</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/RAMEN">라면</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/DRINk">음료</a>
-                </li>
-            </ul>
+    <!--                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
+    <!--                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <a class="nav-link" href="/CUTLET">돈까스</a>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <a class="nav-link" href="/KIMBAB">김밥</a>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <a class="nav-link" href="/RAMEN">라면</a>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <a class="nav-link" href="/DRINk">음료</a>-->
+    <!--                        </li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+    <!--            </nav>-->
+
+
+    <!--            <div class="sex">-->
+    <!--                sex-->
+    <!--            </div>-->
+
+    <header>
+
+        <div class="floatContainer">
+
+            <h1 class="floatLeft"><a href="/"><img src="/img/동국.png" alt="동국대 키오스크에 오신걸 환영합니다."></a></h1>
+
+
+
+
+
+            <div class="mobile_icon floatRight floatContainer">
+
+                <a href="camera.html" class="floatLeft"></a>
+                <a href="main2.html" class="floatLeft"></a>
+                <div class="floatLeft">
+                                                <span class="material-icons">
+                                                    menu
+                                                </span>
+                </div>
+
+
+            </div>
+            <nav>
+                <ul class="floatContainer nav_arial floatRight">
+
+                    <li class="mobile_Search">
+
+                                                    <span class="material-icons">
+                                                        clear
+                                                    </span>
+                    </li>
+                    <li>
+                        <a href="/">
+                            HOME
+                            <span class="material-icons">
+                                                            keyboard_arrow_down
+                                                        </span>
+                        </a>
+                        <ol class="nanumgothic">
+                            <li>홈</li>
+                            <li><a href="/">키오스크 첫 화면</a></li>
+                        </ol>
+                    </li>
+                    <!-- <li>
+                        <a href="menu.html">
+                            MENU
+                            <span class="material-icons">
+                                keyboard_arrow_down
+                            </span>
+                        </a>
+                        <ol class="nanumgothic"> navigation 표시-->
+                    <!-- <li>메뉴</li>
+                            <li><a href="menu.html">김밥</a></li>
+                            <li><a href="menu.html">돈까스</a></li>
+                            <li><a href="menu.html">햄버거</a></li>
+                            <li><a href="menu.html">사이드</a></li>
+                            <li><a href="menu.html">음료&디저트</a></li>
+                        </ol>
+                    </li> -->
+
+                    <li>
+                        <a href="./login.html">
+                            SIGN IN
+                            <span class="material-icons">
+                                keyboard_arrow_down
+                            </span>
+                        </a>
+                        <ol class="nanumgothic">
+                            <li>로그인</li>
+                            <li><a href="./login.html">로그인</a></li>
+                        </ol>
+                    </li>
+
+                    <li>
+                        <a href="camera.html">
+                            TAKE ORDER BY PICTURE
+                            <span class="material-icons">
+                                keyboard_arrow_down
+                            </span>
+                        </a>
+                        <ol class="nanumgothic">
+                            <li>사진으로 주문</li>
+                            <li><a href="camera.html">사진으로 주문</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="/">
+                            메뉴들
+                            <span class="material-icons">
+                                keyboard_arrow_down
+                            </span>
+                        </a>
+                        <ol class="nanumgothic">
+                            <li></li>
+                            <li>돈까스</li>
+                            <li><a href="/CUTLET">돈까스</a></li>
+                            <li>김밥</li>
+                            <li><a href="/GIMBAB">김밥</a></li>
+                            <li>라면</li>
+                            <li><a href="/RAMEN">라면</a></li>
+                            <li>음료</li>
+                            <li><a href="/DRINk">음료</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </nav>
-</div>
+    </header>
+    </div>
 
+
+
+
+</body>
 </html>

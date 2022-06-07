@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -35,11 +35,13 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
+
+		<!--<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency>-->
+		<!--mysql대신 h2사용-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -91,6 +93,8 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
@@ -127,6 +131,14 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
