@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+
+<head>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+
+<!-- 사용자 스크립트 추가 -->
+<th:block layout:fragment="script">
+
+    <script th:inline="javascript"></script>
+
+</th:block>
+<!-- 사용자 CSS 추가 -->
+
+
+<div layout:fragment="content">
+    <section class="login_page">
+        <div>
+            <div class="floatContainer">
+                    <img src="/img/동국.png">
+
+            </div>
+
+<!--            <img src="/img/동국.png">-->
+            <h2 class="strong_05">동국대 키오스크</h2>
+            <p class="title_04_3">오오키 조</p>
+
+            <div>
+                <ul class="floatContainer">
+                    <li><a href="/camera.html">사진 주문</a></li>
+                    <li><a href="/">일반 주문</a></li>
+                    <li><a href="/">메뉴보기</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+
+
+</html>
